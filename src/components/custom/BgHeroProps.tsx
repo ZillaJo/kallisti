@@ -8,7 +8,7 @@ interface BackgroundHeroProps {
 
 const BackgroundHero: React.FC<BackgroundHeroProps> = ({ children }) => {
   return (
-    <div className="relative min-h-screen bg-black text-white overflow-hidden">
+    <div className="relative min-h-screen bg-black text-white overflow-hidden ">
       {/* Dégradé coin haut droit */}
       <div
         className="

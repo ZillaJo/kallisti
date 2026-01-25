@@ -1,6 +1,6 @@
 "use client";
 
-import heroImg from "../../assets/images/img1.jpeg";
+import heroImg from "../../assets/images/img8.png";
 import BgHeroProps from "../custom/BgHeroProps";
 
 export default function HomePage() {
@@ -8,42 +8,13 @@ export default function HomePage() {
     <BgHeroProps>
       {/* Hero Section */}
       <section
-        className="
-          relative
-          mt-10
-          z-10
-          mx-auto
-          flex
-          max-w-7xl
-          flex-col-reverse
-          items-center
-          gap-12
-          px-4
-          py-12
-          sm:px-6
-          md:py-16
-          lg:flex-row
-          lg:gap-20
-          lg:px-8
-          lg:py-28
-        "
+        className="relative grid grid-cols-1 lg:grid-cols-2 items-center justify-between w-full mx-auto px-5 md:px-10 lg:px-20 py-20 lg:py-40 gap-5"
       >
         {/* Texte */}
         <div
-          className="
-            flex
-            w-full
-            max-w-xl
-            flex-col
-            items-center
-            space-y-6
-            text-center
-            lg:w-1/2
-            lg:items-start
-            lg:text-left
-          "
+          className="order-2 lg:order-1 w-full flex-col items-center space-y-6 text-center lg:items-start lg:text-left"
         >
-          <h1 className="text-3xl font-bold sm:text-4xl md:text-5xl">
+          <h1 className="text-3xl font-bold sm:text-4xl md:text-5xl text-center lg:text-start w-full">
             Bienvenue chez <span className="text-amber-500">KALLISTI</span>
           </h1>
 
@@ -54,7 +25,7 @@ export default function HomePage() {
           </p>
 
           {/* CTA */}
-          <div className="flex w-full flex-col gap-4 sm:w-auto sm:flex-row">
+          <div className="flex flex-row items-center justify-center lg:justify-start gap-5">
             <a
               href="#projects"
               className="
@@ -101,25 +72,13 @@ export default function HomePage() {
 
         {/* Image */}
         <div
-          className="
-            flex
-            w-full
-            justify-center
-            lg:w-1/2
-            lg:justify-end
-          "
+          className="order-1 lg:order-2 w-full rounded-2xl overflow-hidden "
         >
           <img
             src={heroImg}
             alt="Hero illustration"
             className="
-              w-full
-              max-w-xs
-              rounded-3xl
-              object-cover
-              shadow-[0_10px_25px_rgba(241,131,13,0.4)]
-              sm:max-w-sm
-              md:max-w-md
+             w-full h-full object-cover
             "
           />
         </div>

@@ -1,22 +1,13 @@
-
-import './App.scss'
-import Home from './components/Home/Home'
-import Navbar from './components/Navbar/Navbar'
-
+import Home from "./components/custom/Home";
+import Navbar from "./components/custom/Navbar";
 
 function App() {
- 
-
   return (
-   <div className='app'>
-     <section className="conteneur-acceuil">
-      <div className="acceuil">
-        <Navbar />
-        <Home />
-      </div>
-     </section>
-   </div>
-  )
+    <div className="flex flex-col justify-center">
+     <Navbar/>
+     <Home />
+    </div>
+  );
 }
 
 export default App;

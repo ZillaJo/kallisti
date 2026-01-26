@@ -23,7 +23,7 @@ export default function ServicesPage() {
           {/* Services grid */}
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {/* Service 1 */}
-            <div className="rounded-2xl border border-amber-200 p-6 transition hover:shadow-[0_10px_25px_rgba(241,131,13,0.4)]">
+            <div className="rounded-2xl border border-amber-500 p-6 transition hover:shadow-[0_10px_25px_rgba(241,131,13,0.4)]">
               <Network className="h-8 w-8 text-amber-500" />
               <h3 className="mt-4 text-lg font-semibold text-gray-200">
                 Infrastructures Télécom
@@ -36,10 +36,10 @@ export default function ServicesPage() {
             </div>
 
             {/* Service 2 */}
-            <div className="rounded-2xl border border-amber-200 p-6 transition hover:shadow-[0_10px_25px_rgba(241,131,13,0.4)]">
+            <div className="rounded-2xl border border-amber-500 p-6 transition hover:shadow-[0_10px_25px_rgba(241,131,13,0.4)]">
               <Building2 className="h-8 w-8 text-amber-500" />
               <h3 className="mt-4 text-lg font-semibold text-gray-200">
-                Architecture & Conception
+                Architecture <span className="text-amber-500">&</span> Conception
               </h3>
               <p className="mt-2 text-sm text-gray-300 leading-relaxed">
                 Études architecturales, conception de bâtiments et intégration
@@ -48,7 +48,7 @@ export default function ServicesPage() {
             </div>
 
             {/* Service 3 */}
-            <div className="rounded-2xl border border-amber-200 p-6 transition hover:shadow-[0_10px_25px_rgba(241,131,13,0.4)]">
+            <div className="rounded-2xl border border-amber-500 p-6 transition hover:shadow-[0_10px_25px_rgba(241,131,13,0.4)]">
               <Wifi className="h-8 w-8 text-amber-500" />
               <h3 className="mt-4 text-lg font-semibold text-gray-200">
                 Solutions de Connectivité
@@ -60,10 +60,10 @@ export default function ServicesPage() {
             </div>
 
             {/* Service 4 */}
-            <div className="rounded-2xl border border-amber-200 p-6 transition hover:shadow-[0_10px_25px_rgba(241,131,13,0.4)]">
+            <div className="rounded-2xl border border-amber-500 p-6 transition hover:shadow-[0_10px_25px_rgba(241,131,13,0.4)]">
               <Ruler className="h-8 w-8 text-amber-500" />
               <h3 className="mt-4 text-lg font-semibold text-gray-200">
-                Études & Ingénierie
+                Études <span className="text-amber-500">&</span> Ingénierie
               </h3>
               <p className="mt-2 text-sm text-gray-300 leading-relaxed">
                 Analyse des besoins, études techniques et accompagnement
@@ -72,10 +72,10 @@ export default function ServicesPage() {
             </div>
 
             {/* Service 5 */}
-            <div className="rounded-2xl border border-amber-200 p-6 transition hover:shadow-[0_10px_25px_rgba(241,131,13,0.4)]">
+            <div className="rounded-2xl border border-amber-500 p-6 transition hover:shadow-[0_10px_25px_rgba(241,131,13,0.4)]">
               <ShieldCheck className="h-8 w-8 text-amber-500" />
               <h3 className="mt-4 text-lg font-semibold text-gray-200">
-                Sécurité & Fiabilité
+                Sécurité <span className="text-amber-500">&</span> Fiabilité
               </h3>
               <p className="mt-2 text-sm text-gray-300 leading-relaxed">
                 Sécurisation des infrastructures, contrôle d’accès, surveillance
@@ -84,10 +84,10 @@ export default function ServicesPage() {
             </div>
 
             {/* Service 6 */}
-            <div className="rounded-2xl border border-amber-200 p-6 transition hover:shadow-[0_10px_25px_rgba(241,131,13,0.4)]">
+            <div className="rounded-2xl border border-amber-500 p-6 transition hover:shadow-[0_10px_25px_rgba(241,131,13,0.4)]">
               <Cable className="h-8 w-8 text-amber-500" />
               <h3 className="mt-4 text-lg font-semibold text-gray-200">
-                Câblage & Intégration
+                Câblage <span className="text-amber-500">&</span> Intégration
               </h3>
               <p className="mt-2 text-sm text-gray-300 leading-relaxed">
                 Installation de câblage structuré et intégration complète des

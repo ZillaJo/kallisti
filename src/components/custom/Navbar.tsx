@@ -15,7 +15,7 @@ export default function Navbar() {
         <DialogBackdrop className="fixed inset-0 bg-black/30 backdrop-blur-sm" />
 
         <DialogPanel
-          className="fixed inset-y-0 right-0 h-[70%] w-[60%] max-w-xs bg-gray-100 p-4 z-10 rounded-b-2xl shadow-[0_10px_25px_rgba(241,131,13,0.4)] transition-transform duration-300"
+          className="fixed inset-y-0 right-0 h-[75%] w-[60%] max-w-xs bg-gray-100 p-4 z-10 rounded-b-2xl shadow-[0_10px_25px_rgba(241,131,13,0.4)] transition-transform duration-300"
         >
           {/* Header */}
           <div className="mb-8 flex items-center justify-between">
@@ -32,19 +32,25 @@ export default function Navbar() {
           <nav className="flex flex-col space-y-6 text-base">
             <a
               href="#"
-              className="font-medium text-gray-800 hover:text-indigo-600"
+              className="font-medium text-black/90 hover:text-yellow-700"
             >
-              Home
+              Acceuil
             </a>
             <a
               href="#"
-              className="font-medium text-gray-800 hover:text-indigo-600"
+              className="font-medium text-black/90 hover:text-yellow-700"
             >
-              About
+              À propos
             </a>
             <a
               href="#"
-              className="font-medium text-gray-800 hover:text-indigo-600"
+              className="font-medium text-black/90 hover:text-yellow-700"
+            >
+              Services
+            </a>
+            <a
+              href="#"
+              className="font-medium text-black/90 hover:text-yellow-700"
             >
               Projects
             </a>
@@ -63,7 +69,7 @@ export default function Navbar() {
 
             <a
               href="#"
-              className=" mt-2rounded-full bg-yellow-700py-2.5 text-center text-sm font-semibold text-white hover:bg-indigo-700 "
+              className="  rounded-full bg-yellow-700 py-2.5 text-center text-sm font-semibold text-white hover:bg-indigo-700 "
             >
               Contact us
             </a>
@@ -104,13 +110,13 @@ export default function Navbar() {
                 href="#"
                 className="text-sm font-medium text-black/90 hover:text-yellow-700"
               >
-                Home
+                Acceuil
               </a>
               <a
                 href="#"
                 className="text-sm font-medium text-black/90 hover:text-yellow-700"
               >
-                About
+                À propos
               </a>
               <a
                 href="#"

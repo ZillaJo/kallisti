@@ -15,17 +15,7 @@ export default function Navbar() {
         <DialogBackdrop className="fixed inset-0 bg-black/30 backdrop-blur-sm" />
 
         <DialogPanel
-          className="
-            fixed inset-y-0 right-0
-            h-[70%]
-            w-[60%] max-w-xs
-            bg-gray-100
-            p-4
-            z-10
-            rounded-b-2xl
-            shadow-[0_10px_25px_rgba(241,131,13,0.4)]
-            transition-transform duration-300
-          "
+          className="fixed inset-y-0 right-0 h-[70%] w-[60%] max-w-xs bg-gray-100 p-4 z-10 rounded-b-2xl shadow-[0_10px_25px_rgba(241,131,13,0.4)] transition-transform duration-300"
         >
           {/* Header */}
           <div className="mb-8 flex items-center justify-between">
@@ -64,15 +54,7 @@ export default function Navbar() {
             {/* Espace client (mobile) */}
             <a
               href="#"
-              className="
-                flex items-center gap-2
-                rounded-full
-                border border-current
-                px-4 py-1.5
-                text-sm font-medium
-                text-yellow-700
-                transition-colors duration-200
-                hover:text-indigo-600
+              className=" flex items-center gap-2 rounded-full border border-current px-4 py-1.5 text-sm font-medium text-yellow-700 transition-colors duration-200 hover:text-indigo-600
               "
             >
               <User className="size-4" />
@@ -81,17 +63,7 @@ export default function Navbar() {
 
             <a
               href="#"
-              className="
-                mt-2
-                rounded-full
-                bg-yellow-700
-                py-2.5
-                text-center
-                text-sm
-                font-semibold
-                text-white
-                hover:bg-indigo-700
-              "
+              className=" mt-2rounded-full bg-yellow-700py-2.5 text-center text-sm font-semibold text-white hover:bg-indigo-700 "
             >
               Contact us
             </a>
@@ -102,12 +74,7 @@ export default function Navbar() {
       {/* Desktop Navbar */}
       <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div
-          className="
-            flex h-15 items-center
-            rounded-b-2xl
-            bg-white
-            px-4
-            shadow-[0_8px_20px_rgba(241,131,13,0.35)]
+          className="flex h-15 items-center rounded-b-2xl bg-white px-4 shadow-[0_8px_20px_rgba(241,131,13,0.35)]
           "
         >
           {/* Logo */}
@@ -135,19 +102,24 @@ export default function Navbar() {
             <div className="flex space-x-10">
               <a
                 href="#"
-                className="text-sm font-medium text-gray-700 hover:text-yellow-700"
+                className="text-sm font-medium text-black/90 hover:text-yellow-700"
               >
                 Home
               </a>
               <a
                 href="#"
-                className="text-sm font-medium text-gray-700 hover:text-yellow-700"
+                className="text-sm font-medium text-black/90 hover:text-yellow-700"
               >
                 About
               </a>
               <a
                 href="#"
-                className="text-sm font-medium text-gray-700 hover:text-yellow-700"
+                className="text-sm font-medium text-black/90 hover:text-yellow-700"
+              >
+                Services
+              </a> <a
+                href="#"
+                className="text-sm font-medium text-black/90 hover:text-yellow-700"
               >
                 Projects
               </a>
@@ -158,16 +130,7 @@ export default function Navbar() {
           <div className="hidden lg:flex items-center space-x-6 ml-auto">
             <a
               href="#"
-              className="
-                flex items-center gap-2
-                rounded-full
-                border border-current
-                px-4 py-1.5
-                text-sm font-medium
-                text-yellow-700
-                transition-colors duration-200
-                hover:text-black/90
-              "
+              className="flex items-center gap-2 rounded-full border border-current px-4 py-1.5   text-sm font-medium text-yellow-700  transition-colors duration-200  hover:text-black/90 "
             >
               <User className="size-4" />
               Espace client

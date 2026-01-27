@@ -27,16 +27,7 @@ export default function Footer() {
         <button
           onClick={scrollToTop}
           aria-label="Retour en haut"
-          className="
-            fixed bottom-6 right-6 z-50
-            rounded-full
-            bg-amber-500
-            p-3
-            text-black
-            shadow-lg
-            transition
-            hover:bg-amber-400
-          "
+          className="fixed bottom-6 right-6 z-50 rounded-full bg-amber-500 p-3 text-black shadow-lg transition hover:bg-amber-400"
         >
           <ArrowUp className="h-5 w-5" />
         </button>
@@ -61,10 +52,10 @@ export default function Footer() {
               Navigation
             </h4>
             <ul className="mt-4 space-y-3 text-sm">
-              <li><a href="/" className="hover:text-amber-500">Accueil</a></li>
-              <li><a href="/about" className="hover:text-amber-500">À propos</a></li>
-              <li><a href="/services" className="hover:text-amber-500">Services</a></li>
-              <li><a href="/contact" className="hover:text-amber-500">Contact</a></li>
+              <li><a href="#" className="hover:text-amber-500">Accueil</a></li>
+              <li><a href="#about" className="hover:text-amber-500">À propos</a></li>
+              <li><a href="#services" className="hover:text-amber-500">Services</a></li>
+              <li><a href="#realisations" className="hover:text-amber-500">Projets</a></li>
             </ul>
           </div>
 

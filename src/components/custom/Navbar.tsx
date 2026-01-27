@@ -5,62 +5,139 @@ import { Dialog, DialogBackdrop, DialogPanel } from "@headlessui/react";
 import { Menu, User, X } from "lucide-react";
 import logoImg from "../../assets/images/img8.png";
 
+const navLinks = [
+  { label: "Accueil", href: "#home" },
+  { label: "À propos", href: "#about" },
+  { label: "Services", href: "#services" },
+  { label: "Projects", href: "#realisations" },
+];
+
 export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
     <header className="fixed top-0 inset-x-0 z-50">
-      {/* Mobile menu */}
+      {/* ================= MOBILE MENU ================= */}
       <Dialog open={open} onClose={setOpen} className="relative lg:hidden">
         <DialogBackdrop className="fixed inset-0 bg-black/30 backdrop-blur-sm" />
 
         <DialogPanel
-          className="fixed inset-y-0 right-0 h-[75%] w-[60%] max-w-xs bg-gray-100 p-4 z-10 rounded-b-2xl shadow-[0_10px_25px_rgba(241,131,13,0.4)] transition-transform duration-300"
+          className="
+            fixed top-0 right-0 z-10 w-[90%] max-w-sm sm:w-[75%] h-fit  bg-gray-100 p-5 rounded-b-2xl shadow-[0_10px_25px_rgba(241,131,13,0.4)] transform transition-transform duration-300 ease-out  data-closed:translate-x-full
+          "
         >
           {/* Header */}
-          <div className="mb-8 flex items-center justify-between">
-            <span className="text-base font-semibold tracking-wide">Menu</span>
+          <div className="mb-6 flex items-center justify-between">
+            <span className="text-sm font-semibold tracking-wide">Menu</span>
             <button
               onClick={() => setOpen(false)}
-              className="rounded-md p-2 text-gray-600 hover:bg-gray-100"
+              className="rounded-md p-2 text-gray-600 hover:bg-gray-200 transition"
             >
               <X className="size-5" />
             </button>
           </div>
 
           {/* Navigation */}
-          <nav className="flex flex-col space-y-6 text-base">
+          <nav className="flex flex-col space-y-5 text-sm sm:text-base">
+            {navLinks.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                onClick={() => setOpen(false)}
+                className="font-medium text-black/90 hover:text-yellow-700 transition active:scale-[0.97] "
+              >
+                {link.label}
+              </a>
+            ))}
+
+            <div className="my-4 h-px bg-gray-300/60" />
+
+            {/* Espace client */}
             <a
-              href="#"
-              className="font-medium text-black/90 hover:text-yellow-700"
+              href="#login"
+              onClick={() => setOpen(false)}
+              className="flex items-center justify-center gap-2 rounded-full border border-yellow-700 px-4 py-2 text-sm font-medium text-yellow-700 hover:bg-yellow-700 hover:text-white transition "
             >
-              Acceuil
-            </a>
-            <a
-              href="#"
-              className="font-medium text-black/90 hover:text-yellow-700"
-            >
-              À propos
-            </a>
-            <a
-              href="#"
-              className="font-medium text-black/90 hover:text-yellow-700"
-            >
-              Services
-            </a>
-            <a
-              href="#"
-              className="font-medium text-black/90 hover:text-yellow-700"
-            >
-              Projects
+              <User className="size-4" />
+              Espace client
             </a>
 
-            <div className="my-4 h-px bg-gray-200" />
-
-            {/* Espace client (mobile) */}
+            {/* Contact */}
             <a
-              href="#"
-              className=" flex items-center gap-2 rounded-full border border-current px-4 py-1.5 text-sm font-medium text-yellow-700 transition-colors duration-200 hover:text-indigo-600
+              href="#contact"
+              onClick={() => setOpen(false)}
+              className="rounded-full bg-yellow-700 py-3 text-center text-sm font-semibold text-white hover:bg-black/90 transition
+              "
+            >
+              Contactez-nous
+            </a>
+          </nav>
+        </DialogPanel>
+      </Dialog>
+
+      {/* ================= DESKTOP NAVBAR ================= */}
+      <nav className="mx-auto max-w-7xl px-3 sm:px-6 lg:px-8">
+        <div
+          className="
+            flex h-14 sm:h-16 items-center
+            rounded-b-2xl
+            bg-white
+            px-3 sm:px-4
+            shadow-[0_8px_20px_rgba(241,131,13,0.35)]
+          "
+        >
+          {/* Logo */}
+          <div className="flex items-center shrink-0">
+            <a href="#home" className="flex items-center">
+              <img
+                src={logoImg}
+                alt="Logo"
+                className="h-9 sm:h-11 md:h-14 w-auto"
+              />
+              <div className="ml-2 flex flex-col">
+                <h1 className="text-lg sm:text-xl md:text-2xl font-bold text-yellow-700">
+                  KALLISTI
+                </h1>
+                <p className="text-[0.55rem] sm:text-[0.6rem] md:text-[0.65rem] text-gray-500">
+                  Think outside the box
+                </p>
+              </div>
+            </a>
+          </div>
+
+          {/* Desktop menu */}
+          <div className="hidden lg:flex flex-1 justify-center">
+            <div className="flex space-x-10">
+              {navLinks.map((link) => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  className="
+                    text-sm font-medium
+                    text-black/90
+                    hover:text-yellow-700
+                    transition
+                  "
+                >
+                  {link.label}
+                </a>
+              ))}
+            </div>
+          </div>
+
+          {/* Desktop actions */}
+          <div className="hidden lg:flex items-center space-x-6 ml-auto">
+            <a
+              href="#login"
+              className="
+                flex items-center gap-2
+                rounded-full
+                border border-yellow-700
+                px-4 py-1.5
+                text-sm font-medium
+                text-yellow-700
+                hover:text-black/90
+                transition
               "
             >
               <User className="size-4" />
@@ -68,92 +145,25 @@ export default function Navbar() {
             </a>
 
             <a
-              href="#"
-              className="  rounded-full bg-yellow-700 py-2.5 text-center text-sm font-semibold text-white hover:bg-indigo-700 "
+              href="#contact"
+              className="
+                rounded-full
+                bg-yellow-700
+                px-4 py-2
+                text-sm font-medium
+                text-white
+                hover:bg-black/90
+                transition
+              "
             >
-              Contact us
-            </a>
-          </nav>
-        </DialogPanel>
-      </Dialog>
-
-      {/* Desktop Navbar */}
-      <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div
-          className="flex h-15 items-center rounded-b-2xl bg-white px-4 shadow-[0_8px_20px_rgba(241,131,13,0.35)]
-          "
-        >
-          {/* Logo */}
-          <div className="flex items-center shrink-0">
-            <a href="#">
-              <img
-                src={logoImg}
-                alt="Logo"
-                className="h-10 w-auto sm:h-12 md:h-14"
-              />
-            </a>
-
-            <div className="ml-2 flex flex-col justify-center">
-              <h1 className="text-lg sm:text-xl md:text-2xl font-bold text-yellow-700">
-                KALLISTI
-              </h1>
-              <p className="text-[0.55rem] sm:text-[0.6rem] md:text-[0.65rem] text-gray-500">
-                Think outside the box
-              </p>
-            </div>
-          </div>
-
-          {/* Center menu */}
-          <div className="hidden lg:flex flex-1 justify-center">
-            <div className="flex space-x-10">
-              <a
-                href="#"
-                className="text-sm font-medium text-black/90 hover:text-yellow-700"
-              >
-                Acceuil
-              </a>
-              <a
-                href="#"
-                className="text-sm font-medium text-black/90 hover:text-yellow-700"
-              >
-                À propos
-              </a>
-              <a
-                href="#"
-                className="text-sm font-medium text-black/90 hover:text-yellow-700"
-              >
-                Services
-              </a> <a
-                href="#"
-                className="text-sm font-medium text-black/90 hover:text-yellow-700"
-              >
-                Projects
-              </a>
-            </div>
-          </div>
-
-          {/* Right actions */}
-          <div className="hidden lg:flex items-center space-x-6 ml-auto">
-            <a
-              href="#"
-              className="flex items-center gap-2 rounded-full border border-current px-4 py-1.5   text-sm font-medium text-yellow-700  transition-colors duration-200  hover:text-black/90 "
-            >
-              <User className="size-4" />
-              Espace client
-            </a>
-
-            <a
-              href="#"
-              className="rounded-full bg-yellow-700 px-4 py-2 text-sm font-medium text-white hover:bg-black/90"
-            >
-              Contact us
+              Contactez-nous
             </a>
           </div>
 
           {/* Mobile button */}
           <button
             onClick={() => setOpen(true)}
-            className="ml-auto rounded-md p-2 text-gray-600 hover:bg-gray-100 lg:hidden"
+            className="ml-auto rounded-md p-2 text-gray-600 hover:bg-gray-200 transition lg:hidden"
           >
             <Menu className="size-6" />
           </button>

@@ -7,7 +7,7 @@ export default function HomePage() {
   return (
     <BgHeroProps>
       {/* Hero Section */}
-      <section className="relative grid grid-cols-1 lg:grid-cols-2 items-center justify-between w-full mx-auto px-5 md:px-10 lg:px-20 py-20 lg:py-40 gap-5">
+      <section id="home" className="relative grid grid-cols-1 lg:grid-cols-2 items-center justify-between w-full mx-auto px-5 md:px-10 lg:px-20 py-20 lg:py-40 gap-5">
         {/* Texte */}
         <div className="order-2 lg:order-1 w-full flex-col items-center space-y-6 text-center lg:items-start lg:text-left">
           <h1 className="text-3xl font-bold sm:text-4xl md:text-5xl text-center lg:text-start w-full">
@@ -23,7 +23,7 @@ export default function HomePage() {
           {/* CTA */}
           <div className="flex flex-row items-center justify-center lg:justify-start gap-5">
             <a
-              href="#projects"
+              href="#realisations"
               className="inline-flex items-center justify-center rounded-full  bg-amber-500 px-6  py-3 text-sm font-semibold text-black  transition   hover:bg-amber-400"
             >
               Voir nos projets

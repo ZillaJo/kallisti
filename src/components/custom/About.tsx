@@ -4,7 +4,7 @@ import aboutImg from "../../assets/images/img10.png";
 
 export default function AboutPage() {
   return (
-    <section className="relative bg-white py-16 sm:py-20 lg:py-28">
+    <section className="relative bg-white py-16 sm:py-20 lg:py-28" id="about">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-co gap-12 lg:flex-row lg:items-center lg:gap-20">
         {/* Image à gauche */}
         <div className="hidden w-full h-140 lg:w-1/2 lg:flex justify-center lg:justify-start">

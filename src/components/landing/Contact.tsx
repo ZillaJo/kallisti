@@ -1,10 +1,10 @@
 import { MapPin, Phone, Mail } from "lucide-react";
-import BgHeroProps from "./BgHeroProps";
+import BgHeroProps from "../custom/BgHeroProps";
 
 export default function Contact() {
   return (
     <BgHeroProps>
-      <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8 lg:py-28" id="contact">
+      <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8 lg:py-28">
         {/* Titre */}
         <div className="text-center mb-16">
           <h1 className="text-4xl font-bold text-gray-100">

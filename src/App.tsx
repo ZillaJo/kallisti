@@ -1,23 +1,24 @@
-import About from "./components/custom/About";
-import Home from "./components/custom/Home";
-import Navbar from "./components/custom/Navbar";
-import Realisation from "./components/custom/Realisation";
-import Services from "./components/custom/Services";
-import Contact from "./components/custom/Contact";
-import Footer from "./components/custom/Footer";
+import { Routes, Route } from "react-router-dom";
+import MainLayout from "@/layouts/MainLayout";
 
-function App() {
+import LandingPage from "@/pages/LandingPage";
+import AboutPage from "@/pages/AboutSession";
+import ServicesPage from "@/pages/ServiceSession";
+import { AnimatePresence } from "framer-motion";
+import PageTransition from "./components/animations/PageTransition";
+// import ProjectsPage from "@/pages/ProjectsPage";
+
+export default function AppRouter() {
   return (
-    <div>
-     <Navbar/>
-     <Home />
-     <About />
-     <Services />
-     <Realisation />
-     <Contact />
-     <Footer />
-    </div>
+    <AnimatePresence mode="wait">
+      <Routes>
+        <Route element={<MainLayout />}>
+          <Route path="/" element={<PageTransition><LandingPage /></PageTransition>} />
+          <Route path="/about" element={<PageTransition><AboutPage /></PageTransition>} />
+          <Route path="/services" element={<PageTransition><ServicesPage /></PageTransition>} />
+          {/* <Route path="/projects" element={<ProjectsPage />} /> */}
+        </Route>
+      </Routes>
+    </AnimatePresence>
   );
 }
-
-export default App;

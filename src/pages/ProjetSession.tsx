@@ -1,8 +1,14 @@
 "use client";
 
 import { useRef, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 import BackgroundHero from "@/components/custom/BgHeroProps";
+import {
+  motion,
+  AnimatePresence,
+  useMotionValue,
+  useTransform,
+  animate,
+} from "framer-motion";
 
 import {
   Network,
@@ -144,19 +150,22 @@ function AnimatedCounter({
   value: number;
   suffix?: string;
 }) {
+  const count = useMotionValue(0);
+  const rounded = useTransform(count, (latest) => Math.round(latest));
+
   return (
     <motion.span
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
+      onViewportEnter={() => {
+        animate(count, value, {
+          duration: 2,
+          ease: "easeOut",
+        });
+      }}
     >
-      <motion.span
-        initial={{ count: 0 }}
-        animate={{ count: value }}
-        transition={{ duration: 2, ease: "easeOut" }}
-      >
-        {Math.round(value)}
-      </motion.span>
+      <motion.span>{rounded}</motion.span>
       {suffix}
     </motion.span>
   );

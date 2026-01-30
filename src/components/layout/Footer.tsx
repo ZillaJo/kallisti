@@ -41,7 +41,7 @@ export default function Footer() {
               KALLISTI
             </h3>
             <p className="mt-4 text-sm leading-relaxed text-gray-400">
-              Entreprise spécialisée en télécommunications et architecture,
+              Entreprise spécialisée en réseaux et architecture,
               offrant des solutions innovantes, performantes et durables.
             </p>
           </div>
@@ -52,10 +52,10 @@ export default function Footer() {
               Navigation
             </h4>
             <ul className="mt-4 space-y-3 text-sm">
-              <li><a href="#" className="hover:text-amber-500">Accueil</a></li>
-              <li><a href="#about" className="hover:text-amber-500">À propos</a></li>
-              <li><a href="#services" className="hover:text-amber-500">Services</a></li>
-              <li><a href="#realisations" className="hover:text-amber-500">Projets</a></li>
+              <li><a href="/" className="hover:text-amber-500">Accueil</a></li>
+              <li><a href="/about" className="hover:text-amber-500">À propos</a></li>
+              <li><a href="/services" className="hover:text-amber-500">Services</a></li>
+              <li><a href="/projects" className="hover:text-amber-500">Projets</a></li>
             </ul>
           </div>
 
@@ -65,7 +65,7 @@ export default function Footer() {
               Services
             </h4>
             <ul className="mt-4 space-y-3 text-sm text-gray-400">
-              <li>Infrastructure Télécom</li>
+              <li>Infrastructure Réseau</li>
               <li>Bâtiments intelligents</li>
               <li>Architecture technique</li>
               <li>Consulting & Audit</li>

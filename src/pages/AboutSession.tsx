@@ -77,9 +77,10 @@ export default function About() {
             </h2>
 
             <p className="text-gray-100 leading-relaxed text-sm sm:text-base">
-              <span className="text-yellow-600 font-semibold">KALLISTI</span> est une entreprise fondée par de jeunes étudiants animés
-              par la volonté de contribuer activement au développement de leur
-              pays à travers des solutions technologiques modernes et durables.
+              <span className="text-yellow-600 font-semibold">KALLISTI</span>{" "}
+              est une entreprise fondée par de jeunes étudiants animés par la
+              volonté de contribuer activement au développement de leur pays à
+              travers des solutions technologiques modernes et durables.
             </p>
 
             <p className="text-gray-100 leading-relaxed text-sm sm:text-base">
@@ -151,7 +152,7 @@ export default function About() {
                 </h3>
                 <p className="text-gray-100 text-sm leading-relaxed">
                   Devenir un acteur de référence dans l’intégration des
-                  télécommunications et de l’architecture, en bâtissant des
+                  infrastructures réseaux et de l’architecture, en bâtissant des
                   environnements intelligents et connectés.
                 </p>
               </motion.div>
@@ -235,6 +236,14 @@ export default function About() {
               </div>
             </motion.div>
           </div>
+        </div>
+        <div className="flex mt-15 justify-center items-center">
+          <a
+            href="/"
+            className="rounded-full w-40 shadow-[0_10px_25px_rgba(241,131,13,0.4)] hover:shadow-yellow-700 bg-yellow-700 py-3 p-4 text-center text-sm font-semibold text-white hover:bg-black/90 transition"
+          >
+            Acceuil
+          </a>
         </div>
       </section>
     </BackgroundHero>

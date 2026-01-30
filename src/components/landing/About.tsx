@@ -7,11 +7,12 @@ export default function About() {
     <section className="relative bg-white py-16 sm:py-20 lg:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-co gap-12 lg:flex-row lg:items-center lg:gap-20">
         {/* Image à gauche */}
-        <div className="hidden w-full h-140 lg:w-1/2 lg:flex justify-center lg:justify-start">
+        <div className="hidden w-full h-170 lg:w-1/2 lg:flex justify-center lg:justify-start">
           <img
             src={aboutImg}
             alt="Architecture & Télécommunications"
-            className="w-full max-w-sm sm:max-w-md lg:max-w-lg rounded-xl object-cover shadow-[0_10px_25px_rgba(241,131,13,0.4)]"/>
+            className="w-full max-w-sm sm:max-w-md lg:max-w-lg rounded-xl object-cover shadow-[0_10px_25px_rgba(241,131,13,0.4)]"
+          />
         </div>
 
         {/* Texte à droite */}
@@ -24,11 +25,11 @@ export default function About() {
             KALLISTI est une entreprise innovante à la croisée des
             <span className="text-yellow-600 font-medium">
               {" "}
-              télécommunications
+              télécommunications(réseaux)
             </span>{" "}
             et de
-            <span className="text-yellow-600 font-medium"> l’architecture</span>.
-            Nous concevons et déployons des infrastructures intelligentes qui
+            <span className="text-yellow-600 font-medium"> l’architecture</span>
+            . Nous concevons et déployons des infrastructures intelligentes qui
             connectent les personnes, les bâtiments et les territoires.
           </p>
 
@@ -73,6 +74,15 @@ export default function About() {
                 Réseaux fiables et performants
               </span>
             </div>
+          </div>
+
+          <div className="flex mt-8 justify-center items-center">
+            <a
+              href="/about"
+              className="rounded-full shadow-[0_10px_25px_rgba(241,131,13,0.4)] hover:shadow-yellow-700 bg-yellow-700 py-3 p-4 text-center text-sm font-semibold text-white hover:bg-black/90 transition"
+            >
+              En savoir plus
+            </a>
           </div>
         </div>
       </div>

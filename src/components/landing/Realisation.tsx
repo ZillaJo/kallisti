@@ -79,8 +79,8 @@ export default function RealisationsPage() {
             Nos <span className="text-yellow-700">Réalisations</span>
           </h2>
           <p className="mt-4 text-sm sm:text-base text-gray-600">
-            Une sélection de projets illustrant notre expertise en
-            télécommunications et en architecture.
+            Une sélection de projets illustrant notre expertise en réseaux et en
+            architecture.
           </p>
         </div>
 
@@ -108,7 +108,6 @@ export default function RealisationsPage() {
                     src={project.image}
                     alt={project.title}
                     className="h-64 w-full object-cover mb-8 md:mb-0 sm:h-80 lg:h-110"
-
                   />
                 </div>
 
@@ -120,6 +119,12 @@ export default function RealisationsPage() {
                   <p className="mt-4 text-sm sm:text-base text-gray-600 leading-relaxed">
                     {project.description}
                   </p>
+                  <a
+                    href="/projects"
+                    className="rounded-full mt-8 shadow-[0_10px_25px_rgba(241,131,13,0.4)] hover:shadow-yellow-700 bg-yellow-700 py-3 text-center text-sm font-semibold text-white hover:bg-black/90 transition"
+                  >
+                    En savoir plus
+                  </a>
                 </div>
               </div>
             ))}

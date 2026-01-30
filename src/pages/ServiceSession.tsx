@@ -18,11 +18,11 @@ import cablingImg from "../assets/images/img6.webp";
 
 const services = [
   {
-    title: "Infrastructures Télécom",
+    title: "Infrastructures Réseaux",
     icon: Network,
     image: telecomImg,
     description: `
-    Nous concevons, déployons et maintenons des infrastructures télécom robustes et évolutives,
+    Nous concevons, déployons et maintenons des infrastructures réseaux robustes et évolutives,
     capables de supporter les besoins actuels et futurs des entreprises, institutions et collectivités.
 
     Nos solutions couvrent les réseaux filaires et sans fil, les backbone de communication,
@@ -137,7 +137,7 @@ export default function ServicesSection() {
               >
                 <div className="flex items-center gap-3 mb-4">
                   <Icon className="h-8 w-8 text-amber-500" />
-                  <h3 className="text-2xl font-bold text-gray-100">
+                  <h3 className="text-2xl font-bold text-white">
                     {service.title}
                   </h3>
                 </div>
@@ -167,6 +167,14 @@ export default function ServicesSection() {
             </div>
           );
         })}
+        <div className="flex mt-15 justify-center items-center">
+          <a
+            href="/"
+            className="rounded-full w-40 shadow-[0_10px_25px_rgba(241,131,13,0.4)] hover:shadow-yellow-700 bg-yellow-700 py-3 p-4 text-center text-sm font-semibold text-white hover:bg-black/90 transition"
+          >
+            Acceuil
+          </a>
+        </div>
       </div>
     </BackgroundHero>
   );

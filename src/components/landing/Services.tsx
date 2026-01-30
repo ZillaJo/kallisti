@@ -1,6 +1,13 @@
 "use client";
 
-import {Network, Building2, Wifi,  Ruler,  ShieldCheck, Cable,} from "lucide-react";
+import {
+  Network,
+  Building2,
+  Wifi,
+  Ruler,
+  ShieldCheck,
+  Cable,
+} from "lucide-react";
 import BgHeroProps from "../custom/BgHeroProps";
 
 export default function ServicesPage() {
@@ -15,7 +22,7 @@ export default function ServicesPage() {
             </h2>
             <p className="mt-4 text-gray-200 text-sm sm:text-base">
               Nous concevons et déployons des solutions complètes alliant
-              télécommunications et architecture, pour bâtir des infrastructures
+              réseaux et architecture, pour bâtir des infrastructures
               intelligentes, durables et connectées.
             </p>
           </div>
@@ -26,7 +33,7 @@ export default function ServicesPage() {
             <div className="rounded-2xl border border-amber-500 p-6 transition hover:shadow-[0_10px_25px_rgba(241,131,13,0.4)]">
               <Network className="h-8 w-8 text-amber-500" />
               <h3 className="mt-4 text-lg font-semibold text-gray-200">
-                Infrastructures Télécom
+                Infrastructures Réseaux
               </h3>
               <p className="mt-2 text-sm text-gray-300 leading-relaxed">
                 Conception, déploiement et maintenance de réseaux de
@@ -39,7 +46,8 @@ export default function ServicesPage() {
             <div className="rounded-2xl border border-amber-500 p-6 transition hover:shadow-[0_10px_25px_rgba(241,131,13,0.4)]">
               <Building2 className="h-8 w-8 text-amber-500" />
               <h3 className="mt-4 text-lg font-semibold text-gray-200">
-                Architecture <span className="text-amber-500">&</span> Conception
+                Architecture <span className="text-amber-500">&</span>{" "}
+                Conception
               </h3>
               <p className="mt-2 text-sm text-gray-300 leading-relaxed">
                 Études architecturales, conception de bâtiments et intégration
@@ -91,10 +99,18 @@ export default function ServicesPage() {
               </h3>
               <p className="mt-2 text-sm text-gray-300 leading-relaxed">
                 Installation de câblage structuré et intégration complète des
-                équipements télécom dans les infrastructures existantes.
+                équipements réseaux dans les infrastructures existantes.
               </p>
             </div>
           </div>
+        </div>
+        <div className="flex mt-8 justify-center items-center">
+          <a
+            href="/services"
+            className="rounded-full shadow-[0_10px_25px_rgba(241,131,13,0.4)] hover:shadow-yellow-700 bg-yellow-700 py-3 p-4 text-center text-sm font-semibold text-white hover:bg-black/90 transition"
+          >
+            En savoir plus
+          </a>
         </div>
       </section>
     </BgHeroProps>

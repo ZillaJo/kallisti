@@ -6,7 +6,7 @@ import AboutPage from "@/pages/AboutSession";
 import ServicesPage from "@/pages/ServiceSession";
 import { AnimatePresence } from "framer-motion";
 import PageTransition from "./components/animations/PageTransition";
-// import ProjectsPage from "@/pages/ProjectsPage";
+import ProjectsPage from "@/pages/ProjetSession";
 
 export default function AppRouter() {
   return (
@@ -16,7 +16,7 @@ export default function AppRouter() {
           <Route path="/" element={<PageTransition><LandingPage /></PageTransition>} />
           <Route path="/about" element={<PageTransition><AboutPage /></PageTransition>} />
           <Route path="/services" element={<PageTransition><ServicesPage /></PageTransition>} />
-          {/* <Route path="/projects" element={<ProjectsPage />} /> */}
+          <Route path="/projects" element={<PageTransition><ProjectsPage /></PageTransition>} />
         </Route>
       </Routes>
     </AnimatePresence>

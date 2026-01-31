@@ -22,15 +22,17 @@ import {
   Users,
   Clock,
   Shield,
+  Home,
 } from "lucide-react";
 
 /* IMAGES */
-import enterpriseNetImg from "../assets/images/img1.jpg";
-import infraNetImg from "../assets/images/img4.jpg";
-import videoConfImg from "../assets/images/img5.webp";
-import prtgImg from "../assets/images/img2.jpg";
-import windowsImg from "../assets/images/img3.jpg";
-import starlinkImg from "../assets/images/img5.webp";
+import enterpriseNetImg from "/images/img7.jpg";
+import infraNetImg from "/images/img10.png";
+import videoConfImg from "/images/img6.jpg";
+import prtgImg from "/images/img1.webp";
+import windowsImg from "../assets/images/img9.png";
+import starlinkImg from "/images/img4.jpg";
+import gyprocImg from "/images/img2.jpg";
 
 /* TYPES */
 type Project = {
@@ -67,7 +69,8 @@ const projects: Project[] = [
     icon: Server,
     image: infraNetImg,
     description: "Infrastructures robustes et évolutives.",
-    details: "Backbone réseau, redondance, haute disponibilité et performance.",
+    details:
+      "Nous concevons et déployons des infrastructures réseau fiables, sécurisées et évolutives, assurant une connectivité optimale pour les entreprises et les particuliers",
   },
   {
     title: "Visioconférence",
@@ -99,7 +102,18 @@ const projects: Project[] = [
     icon: Satellite,
     image: starlinkImg,
     description: "Internet satellite en zones isolées.",
-    details: "Installation, configuration et maintenance satellite.",
+    details:
+      "Mise en place de solutions Starlink pour particuliers, entreprises et fournisseurs d’accès, garantissant une connexion Internet rapide, stable et fiable.",
+  },
+
+  {
+    title: "Plafond Gyproc",
+    category: "Bâtiment",
+    icon: Home,
+    image: gyprocImg,
+    description: "Plafond élégant et stylé selon votre choix.",
+    details:
+      "Nous concevons et installons des plafonds en Gyproc haut de gamme, alliant esthétique moderne, finitions soignées et durabilité.",
   },
 ];
 
@@ -320,9 +334,12 @@ export default function ProjectsSection() {
                     >
                       Voir le projet
                     </button>
-                    <button className="rounded-lg bg-amber-500 px-5 py-2 text-sm font-medium text-black hover:bg-amber-400">
+                    <a
+                      className="flex items-center rounded-lg bg-amber-500 px-5 py-2 text-sm font-medium text-black hover:bg-amber-400"
+                      href="/contact"
+                    >
                       Demander un devis
-                    </button>
+                    </a>
                   </div>
                 </motion.div>
               );
